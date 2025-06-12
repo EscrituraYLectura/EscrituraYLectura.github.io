@@ -129,3 +129,50 @@ main {
         opacity: 1;
     }
 }
+
+// DISEÑO PARA TELÉFONOS
+
+@media screen and (max-width: 600px) {
+    main {
+        grid-template-rows: auto 1fr auto;
+    }
+
+    #contenedor-paginas {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .contenedor-subpaginas {
+        width: 100%;
+
+        h2 {
+            font-size: x-large;
+        }
+
+        div {
+            grid-template-columns: 1fr;
+            p {
+                border-right: none;
+                border-bottom: 0.2rem solid #121214;
+
+                &:nth-child(1) {
+                    border-radius: 0;
+                }
+
+                &:nth-last-child(1) {
+                    border-radius: 0 0 12px 12px;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    h1 {
+        font-size: small;
+        padding: 0.5rem;
+    }
+
+    p, a {
+        font-size: small;
+    }
+}
