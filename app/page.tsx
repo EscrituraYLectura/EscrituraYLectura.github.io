@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Home() {
     const router = useRouter();
@@ -14,11 +15,11 @@ export default function Home() {
             <h1>Sitio web oficial del servidor Escritura y Lectura</h1>
             <div id="contenedor-paginas">
                 <div className="contenedor-subpaginas">
-                    <h2 onClick={() => irAPagina('/biblioteca')}>Biblioteca</h2>
+                    <Link className="contenedor-titulo" href="/biblioteca">Biblioteca</Link>
                     <div>
-                        <p onClick={() => irAPagina('/biblioteca/buscador')}>Buscador</p>
-                        <p onClick={() => irAPagina('/biblioteca/indices')}>Índices</p>
-                        <p onClick={() => irAPagina('/biblioteca/estadisticas')}>Estadísticas</p>
+                        <Link className="contenedor-subtitulo" href="/biblioteca/buscador">Buscador</Link>
+                        <Link className="contenedor-subtitulo" href="/biblioteca/indices">Índices</Link>
+                        <Link className="contenedor-subtitulo" href="/biblioteca/estadisticas">Estadísticas</Link>
                     </div>
                 </div>
             </div>
