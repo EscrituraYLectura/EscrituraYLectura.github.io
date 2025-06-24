@@ -4,12 +4,6 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function Home() {
-    const router = useRouter();
-
-    const irAPagina = (pagina: string) => {
-        router.push(pagina);
-    }
-
     return (
         <main>
             <h1>Sitio web oficial del servidor Escritura y Lectura</h1>
